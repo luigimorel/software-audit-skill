@@ -1,10 +1,14 @@
-# Independent AppSec Audit
+# Software Audit Skill - Security Audits for AI Coding Assistants
 
-A standalone agent skill for auditing web and mobile applications for security and privacy issues: exposed secrets, broken access control, JWT/session flaws, dependency CVEs, unsafe database policies, sensitive logging, injection, missing rate limits, business-logic abuse, payment weaknesses, and insecure mobile storage.
+An agent skill that helps AI coding assistants find common security and privacy issues before they ship, including exposed secrets, broken access control, insecure data handling, and risky dependencies.
 
-Designed for solo developers and small teams. Findings are prioritized by real-world impact, supported by file/line evidence, explained in plain language, and paired with practical fixes.
+Built by [Luigi Morel](https://github.com/luigimorel), an entrepreneur, software engineer, and independent consultant at [Krafted](https://krafted.africa). I write software, build products, and help businesses solve operational problems with technology.
 
 ## What it does
+
+This standalone skill audits web and mobile applications for security and privacy issues: exposed secrets, broken access control, JWT/session flaws, dependency CVEs, unsafe database policies, sensitive logging, injection, missing rate limits, business-logic abuse, payment weaknesses, and insecure mobile storage.
+
+Designed for solo developers and small teams. Findings are prioritized by real-world impact, supported by file/line evidence, explained in plain language, and paired with practical fixes.
 
 1. Scopes the app, stack, data, integrations, and entry points.
 2. Loads relevant reference guides based on the detected stack and risk areas.
@@ -15,7 +19,27 @@ The default workflow is read-only. It does not run exploits, brute-force authent
 
 ## Use
 
-Install this folder as `audit-skill/` in the skill directory supported by your agent, or provide the folder/ZIP to an Agent Skills-compatible tool.
+Install the skill in your project's `.agents/skills/audit-skill/` directory. Keep `SKILL.md` and the `references/` directory together so the skill can load its guides.
+
+### Manual installation
+
+From your project root, clone this repository into the skill directory:
+
+```sh
+git clone https://github.com/luigimorel/software-audit-skill.git .agents/skills/audit-skill
+```
+
+The installed layout should look like this:
+
+```text
+.agents/
+└── skills/
+    └── audit-skill/
+        ├── SKILL.md
+        └── references/
+```
+
+Restart or refresh your coding agent if it does not detect the skill immediately.
 
 Example requests:
 
@@ -32,6 +56,7 @@ Example requests:
 audit-skill/
 ├── SKILL.md
 ├── README.md
+├── CONTRIBUTING.md
 ├── LICENSE
 └── references/
     ├── access-and-auth.md
