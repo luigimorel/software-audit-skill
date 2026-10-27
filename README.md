@@ -2,7 +2,7 @@
 
 An agent skill that helps AI coding assistants find common security and privacy issues before they ship, including exposed secrets, broken access control, insecure data handling, and risky dependencies.
 
-Built by [Luigi Morel](https://github.com/luigimorel), an entrepreneur, software engineer, and independent consultant at [Krafted](https://krafted.africa). I write software, build products, and help businesses solve operational problems with technology.
+Built by [Luigi Morel](https://github.com/luigimorel), software engineer and independent consultant at [Krafted](https://krafted.africa). 
 
 ## What it does
 
