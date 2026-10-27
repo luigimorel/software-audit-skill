@@ -2,7 +2,7 @@
 
 An agent skill that helps AI coding assistants find common security and privacy issues before they ship, including exposed secrets, broken access control, insecure data handling, and risky dependencies.
 
-Built by [Luigi Morel](https://github.com/luigimorel), software engineer and independent consultant at [Krafted](https://krafted.africa). 
+Built by [Luigi Morel](https://github.com/luigimorel), software engineer and independent consultant at [Krafted](https://krafted.africa).
 
 ## What it does
 
@@ -19,24 +19,23 @@ The default workflow is read-only. It does not run exploits, brute-force authent
 
 ## Use
 
-Install the skill in your project's `.agents/skills/audit-skill/` directory. Keep `SKILL.md` and the `references/` directory together so the skill can load its guides.
+Install the skill in your project's `.agents/software-audit-skill/` directory. Keep `SKILL.md` and the `references/` directory together so the skill can load its guides.
 
 ### Manual installation
 
 From your project root, clone this repository into the skill directory:
 
 ```sh
-git clone https://github.com/luigimorel/software-audit-skill.git .agents/skills/audit-skill
+git clone https://github.com/luigimorel/software-audit-skill.git .agents/software-audit-skill
 ```
 
 The installed layout should look like this:
 
 ```text
 .agents/
-└── skills/
-    └── audit-skill/
-        ├── SKILL.md
-        └── references/
+└── software-audit-skill/
+    ├── SKILL.md
+    └── references/
 ```
 
 Restart or refresh your coding agent if it does not detect the skill immediately.
@@ -53,7 +52,7 @@ Example requests:
 ## Contents
 
 ```text
-audit-skill/
+software-audit-skill/
 ├── SKILL.md
 ├── README.md
 ├── CONTRIBUTING.md
