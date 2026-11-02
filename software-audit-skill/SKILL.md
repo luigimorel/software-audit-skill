@@ -1,5 +1,5 @@
 ---
-name: audit-skill
+name: software-audit-skill
 description: Security and privacy audit for web and mobile apps built fast with AI assistance ("vibe coded"). Checks for OWASP Top 10 issues, leaked secrets, broken access control, sensitive data in logs, APIs that expose too much data, misconfigured Supabase/Firebase rules, insecure mobile storage, and risky dependencies. Use this skill whenever the user asks to audit, review, harden, pen-test, sanity-check, or "make safe" an app or repo, asks "is my app secure?", "is this safe to launch/ship?", "am I leaking anything?", or mentions OWASP, MASVS, RLS, exposed API keys, or logging sensitive data, rate limiting, Stripe webhooks, or Next.js Server Actions, even if they don't say the word "audit". Also use before a launch, after a big AI-generated feature, or when reviewing a React/Next.js/Vue/Node/Go/Flutter/React Native/Swift/Kotlin codebase for security.
 ---
 

@@ -19,17 +19,19 @@ The default workflow is read-only. It does not run exploits, brute-force authent
 
 ## Use
 
-Install the skill in your project's `.agents/software-audit-skill/` directory. Keep `SKILL.md` and the `references/` directory together so the skill can load its guides.
+Keep `SKILL.md` and the `references/` directory together when installing the skill. The skill files are in the repository's `software-audit-skill/` subfolder.
 
-### Manual installation
+### Install for agents that use `.agents/`
 
-From your project root, clone this repository into the skill directory:
+From your project root, clone the repository to a temporary directory, then copy the skill folder:
 
 ```sh
-git clone https://github.com/luigimorel/software-audit-skill.git .agents/software-audit-skill
+git clone https://github.com/luigimorel/software-audit-skill.git /tmp/software-audit-skill
+mkdir -p .agents
+cp -R /tmp/software-audit-skill/software-audit-skill .agents/
 ```
 
-The installed layout should look like this:
+The installed layout will be:
 
 ```text
 .agents/
@@ -37,6 +39,17 @@ The installed layout should look like this:
     ├── SKILL.md
     └── references/
 ```
+
+### Install for Claude Code
+
+Claude Code loads project skills from `.claude/skills/`. From your project root, copy the same skill folder there:
+
+```sh
+mkdir -p .claude/skills
+cp -R /tmp/software-audit-skill/software-audit-skill .claude/skills/
+```
+
+The resulting path is `.claude/skills/software-audit-skill/SKILL.md`.
 
 Restart or refresh your coding agent if it does not detect the skill immediately.
 
@@ -52,22 +65,23 @@ Example requests:
 ## Contents
 
 ```text
-software-audit-skill/
-├── SKILL.md
+repository root/
 ├── README.md
 ├── CONTRIBUTING.md
 ├── LICENSE
-└── references/
-    ├── access-and-auth.md
-    ├── baas-rules.md
-    ├── data-exposure-and-logging.md
-    ├── injection-and-abuse.md
-    ├── integrations.md
-    ├── money-and-pricing.md
-    ├── mobile.md
-    ├── rate-limiting.md
-    ├── rule-register.md
-    └── secrets-and-config.md
+└── software-audit-skill/
+    ├── SKILL.md
+    └── references/
+        ├── access-and-auth.md
+        ├── baas-rules.md
+        ├── data-exposure-and-logging.md
+        ├── injection-and-abuse.md
+        ├── integrations.md
+        ├── money-and-pricing.md
+        ├── mobile.md
+        ├── rate-limiting.md
+        ├── rule-register.md
+        └── secrets-and-config.md
 ```
 
 ## Security references
